@@ -57,8 +57,6 @@ services:
       - "traefik.http.routers.api.middlewares=redirect-to-https"
       - "traefik.http.services.api.loadbalancer.server.port=3000"
     restart: always
-    depends_on:
-      - tecprendimiento-db
 
   tecprendimiento-db:
     image: mysql:8.0
