@@ -71,8 +71,8 @@ services:
       - ./data/tecprendimiento-db:/var/lib/mysql
     restart: always
 
-# volumes:
-#   mysql-data:
-#     driver: local
-#   api-data:
-#     driver: local
+volumes:
+  mysql-data:
+    driver: local
+  api-data:
+    driver: local
