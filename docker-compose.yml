@@ -44,7 +44,7 @@ services:
       - "traefik.http.services.dashboard.loadbalancer.server.port=4200"
     restart: always
 
-  :
+  tecprendimiento-api:
     build:
       context: ./tecprendimientoAPI
       dockerfile: Dockerfile
