@@ -284,9 +284,9 @@ export class ClientsComponent implements OnInit {
 
         // reset the form and the file
         this.updateForm.reset();
-        this.file = null;
-        return;
+        this.file = null;  
       });
+      return;
     }
 
     // en caso de que este sin archivo soolo enviamos el client
