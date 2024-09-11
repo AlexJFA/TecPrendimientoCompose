@@ -1,0 +1,107 @@
+<div
+  class="vh-100 row container-fluit containerCard d-flex justify-content-center align-items-center overflow-auto"
+  [ngStyle]="{
+    'background-color': clientCard?.backgroundColor,
+  }"
+>
+  <div class="col-12 col-lg-6 containerBtn my-auto px-4">
+    @for (item of propertyClientFilter; track $index) {
+
+    <!------------------------- section avatar -------------------->
+    @if(item.firtsName){
+    <app-avatar
+      [clientCard]="clientCard"
+      [avatar]="propertyClientFilter"
+    ></app-avatar>
+    }
+
+    <!---------------------- section title ------------------>
+    @if(item.firtsName){
+    <app-title
+      [clientCard]="clientCard"
+      [title]="propertyClientFilter"
+    ></app-title>
+    }
+
+    <!---------------------- section description -------------------------------->
+    @if(item.description){
+    <app-description
+      [clientCard]="clientCard"
+      [description]="item.description"
+    ></app-description>
+
+    }
+
+    <!----------------------- section buttons circles ------------------------------->
+    @if(item.phone){
+    <app-socialbtn
+      class="col-12 btbSocial d-flex justify-content-center flex-wrap"
+      [clientCard]="clientCard"
+      [btnComponents]="propertyClientFilter"
+    ></app-socialbtn>
+    }
+
+    <!----------------------- section buttoss larger links ------------------------------->
+    <div class="col-12 btnlinks d-flex justify-content-center">
+      <div class="col-12 col-xl-10">
+        <!-- email ------------------------------------------------------------>
+        @if(item.email){
+        <app-email [clientCard]="clientCard" [email]="item.email"></app-email>
+        }
+
+        <!-------- phone ------------------->
+        @if(item.phone){
+        <app-phone [clientCard]="clientCard" [phone]="item.phone"></app-phone>
+        }
+
+        <!-- website --------------------------------------------------->
+        @if(item.website){
+        <!-- {{propertyClientFilter.website}} -->
+        <app-website
+          [clientCard]="clientCard"
+          [website]="item.website"
+        ></app-website>
+        }
+
+        <!-- youtube ----------------------------------------------------->
+        @if(item.youtube){
+        <app-youtube
+          [clientCard]="clientCard"
+          [youtube]="item.youtube"
+        ></app-youtube>
+        }
+
+        <!-- spotify ----------------------------------------------------->
+        @if(item.spotify){
+        <app-spotify
+          [clientCard]="clientCard"
+          [spotify]="item.spotify"
+        ></app-spotify>
+        }
+
+        <!-- twitch ----------------------------------------------------->
+        @if(item.twitch){
+        <app-twitch
+          [clientCard]="clientCard"
+          [twitch]="item.twitch"
+        ></app-twitch>
+        }
+
+        <!-- map ----------------------------------------------------->
+        @if(item.map){
+        <app-map [clientCard]="clientCard" [map]="item.map"></app-map>
+        }
+
+        <!-- my file ----------------------------------------------------->
+        @if(item.myfile){
+        <app-my-file
+          [clientCard]="clientCard"
+          [myfile]="item.myfile"
+        ></app-my-file>
+        }
+      </div>
+    </div>
+
+    }
+  </div>
+</div>

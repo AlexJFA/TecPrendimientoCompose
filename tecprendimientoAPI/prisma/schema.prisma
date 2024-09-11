@@ -1,0 +1,97 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// datasource db {
+//   provider = "sqlite"
+//   url      = env("DATABASE_URL")
+// }
+
+model Administrators {
+  adminId Int @id @default(autoincrement())
+  email   String @unique
+  password String @unique
+}
+
+model Client {
+  userId    Int    @id @default(autoincrement())
+  idCard    Int?   
+  card      card?  @relation(fields: [idCard], references: [cardId])
+  firtsName String 
+  lastName  String
+  description String?
+  phone     String
+  linkedin  String?
+  instagram String?
+  x         String?
+  tiktok     String?
+  facebook  String?
+  email     String
+  photo     String @unique
+  spotify   String?
+  youtube   String?
+  twitch    String?
+  website   String?
+  map       String?
+  myfile    String?
+  userName  String? @unique
+  // country   String?
+  // cards     card?
+
+}
+
+model card {
+  cardId          Int @id @default(autoincrement())
+  backgroundColor String
+  avatarStyle   String
+  fontFamily      String
+  colorTitle      String
+  colorDescription String
+  fontSizeTitle  String
+  fontSizeDescription  String
+  colorFontButtons    String
+  colorButtons    String
+  hoverButtons   String
+  client Client[]
+  // component repoComponents[]
+}
+// model card {
+//   cardId          Int    @id @default(autoincrement())
+//   userId          Int
+//   title           String
+//   backgroundColor String
+//   font            String
+//   borderStyle     String
+// }
+
+model repoComponents {
+  componentId Int    @id @default(autoincrement())
+  type String
+  // card card[]
+}
+// model repoComponents {
+//   componentId Int    @id @default(autoincrement())
+//   type String
+//   prop_one  String
+//   prop_two  String
+//   prop_tree  String
+//   prop_four  String
+//   prop_five  String
+//   prop_six  String
+//   card card[]
+// }
+
+model component {
+  compoId Int    @id @default(autoincrement())
+}

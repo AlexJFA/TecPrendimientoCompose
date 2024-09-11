@@ -1,0 +1,356 @@
+<div class="container-services">
+  <!----------------  seccion of title  ------------------>
+  <div class="container-title pb-0">
+    <h2 class="title py-3">
+      <b> Ayudamos al éxito a través de la tecnología</b>
+    </h2>
+    <p>
+      Listo para llevar tu negocio al siguiente nivel? Con nuestras soluciones
+      innovadoras y servicios expertos, transformamos la manera en que operas y
+      creces. ¡Haz clic ahora y descubre cómo podemos ayudarte a alcanzar el
+      éxito!
+    </p>
+  </div>
+
+  <!----------------  seccion of cards ------------------>
+
+  <div class="row cards d-flex justify-content-center aling-items-center mt-0 mb-2  ">
+    <div class="col-auto card card1 text-bg-dark">
+      <div class="card-img-overlay">
+        <h4 class="card-title text-center">
+          Tarjetas NFC, y productos de gestión inteligente
+        </h4>
+
+        <p class="card-text">
+          "Impulsa tu empresa y equipo ejecutivo con productos inteligentes que
+          optimizan la gestión personal.
+        </p>
+      </div>
+    </div>
+    <div class="col-auto card card2 text-bg-dark">
+      <div class="card-img-overlay">
+        <h4 class="card-title text-center">
+          Consultoría en la aplicación de Inteligencia Artificial
+        </h4>
+
+        <p class="card-text">
+          Empodera tu negocio y capacita a tu equipo con nuestra consultoría en
+          el uso de inteligencias artificiales.
+        </p>
+      </div>
+    </div>
+    <div class="col-auto card card3 text-bg-dark">
+      <div class="card-img-overlay">
+        <h4 class="card-title text-center">
+          Automatización de procesos con Inteligencia Artificial
+        </h4>
+
+        <p class="card-text">
+          "Automatiza y optimiza los procesos operativos de tu empresa con
+          flujos de inteligencia artificial".
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="paragraph mb-5">
+    <p>
+      Contamos con una gama de productos innovadores diseñados para mejorar tu
+      eficiencia y organización. Conoce nuestras NFContact, tarjetas
+      inteligentes que facilitan la creación de redes de contacto con solo
+      acercarlas al celular de tus potenciales contactos. Además, contamos con
+      un sistema analógico de index-cards para la gestión de tareas, llamados
+      NOTIK, que te permiten organizar tus proyectos diarios de manera efectiva
+      mientras disfrutas de una pausa del tiempo en pantalla.
+    </p>
+
+    <div class="d-flex justify-content-center aling-items-center mt-5">
+      <button class="btn btnServices">
+        <a
+          href="https://wa.me/+51936321753?text=Me%20gustaría%20saber%20más%20información%20sobre%20las%20tarjetas%20NFC."
+          target="_blank"
+        >
+          <b>Contacta con nuestro equipo</b>
+        </a>
+      </button>
+    </div>
+  </div>
+
+  <!----------------  seccion of products ------------------>
+  <div class="products text-center p-0">
+    <!----------------  seccion of products HERADBOARD ------------------>
+    <div class="row">
+      <h5
+        class="col-12 col-lg border py-2 px-5 fs-4 nfc"
+        [ngStyle]="this.nfContactStyle"
+        (click)="
+          this.nfContact = true;
+          this.systemNotik = false;
+          this.automatitationIA = false;
+          this.consultingIA = false;
+          this.sofwareWeb = false;
+          setCurrentStyles()
+        "
+      >
+        Tarjeta NFContact
+      </h5>
+      <h5
+        class="col-12 col-lg border py-2 px-5 fs-4 notik"
+        [ngStyle]="this.systemNotikStyle"
+        (click)="
+          this.nfContact = false;
+          this.systemNotik = true;
+          this.automatitationIA = false;
+          this.consultingIA = false;
+          this.sofwareWeb = false;
+          setCurrentStyles()
+        "
+      >
+        Sistema de apuntes Notik
+      </h5>
+      <h5
+        class="col-12 col-lg border py-2 px-5 fs-4 a-ia"
+        [ngStyle]="this.automatitationIAStyle"
+        (click)="
+          this.nfContact = false;
+          this.systemNotik = false;
+          this.automatitationIA = true;
+          this.consultingIA = false;
+          this.sofwareWeb = false;
+          setCurrentStyles()
+        "
+      >
+        Automatización de procesos con I.A.
+      </h5>
+      <h5
+        class="col-12 col-lg border py-2 px-5 fs-4 c-ia"
+        [ngStyle]="this.consultingIAStyle"
+        (click)="
+          this.nfContact = false;
+          this.systemNotik = false;
+          this.automatitationIA = false;
+          this.consultingIA = true;
+          this.sofwareWeb = false;
+          setCurrentStyles()
+        "
+      >
+        Consultoría en herramientas de I.A.
+      </h5>
+      <h5
+        class="col-12 col-lg border py-2 px-5 fs-4 web"
+        [ngStyle]="this.sofwareWebStyle"
+        (click)="
+          this.nfContact = false;
+          this.systemNotik = false;
+          this.automatitationIA = false;
+          this.consultingIA = false;
+          this.sofwareWeb = true;
+          setCurrentStyles()
+        "
+      >
+        Proyectos de Software & Web
+      </h5>
+    </div>
+
+    <!----------------  seccion of products CONTENT ------------------>
+    @if (nfContact) {
+    <div class="row">
+      <div class="col-12 col-lg-6 my-auto px-4 container-content-product">
+        <h2 class="my-5"><b> NFContact Tarjeta Inteligente</b></h2>
+        <p>
+          Muestra al mundo quién eres con nuestras tarjetas de negocio
+          NFContact. Simplifica el compartir tu información con solo un tap e
+          impresiona a tus contactos. Destaca con una herramienta que refleja tu
+          profesionalismo y visión innovadora.
+        </p>
+        <div class="containerbtnNCF d-flex justify-content-start">
+          <button class="btn btnNFC rounded-pill mb-3" type="button">
+            <a
+              href="https://wa.me/+51936321753?text=Me%20gustaría%20saber%20más%20información%20sobre%20las%20tarjetas%20NFC."
+              target="_blank"
+            >
+              <b> ► Obtén la tuya </b>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img
+          src="../../../assets/images/Productos3-min.png"
+          alt=""
+          class="w-100 h-100"
+        />
+      </div>
+    </div>
+    } @if (systemNotik) {
+    <div class="row">
+      <div class="col-12 col-lg-6 my-auto px-4 container-content-product">
+        <h2 class="my-5"><b> Sistema de apuntes NOTIK</b></h2>
+        <p>
+          Organiza tu día y tus proyectos con nuestro sistema de apuntes en
+          index cards estilo analógico NOTIK. Desconéctate digitalmente y
+          potencia tu memoria con lo táctil y tangible.
+        </p>
+        <div class="containerbtnNCF d-flex justify-content-start">
+          <button class="btn btnNFC rounded-pill mb-3" type="button">
+            <a
+              href="https://wa.me/+51936321753?text=Me%20gustaría%20saber%20más%20información%20sobre%20las%20tarjetas%20NFC."
+              target="_blank"
+            >
+              <b> ► Obtén la tuya </b>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img
+          src="../../../assets/images/notik.png"
+          alt=""
+          class="w-100 h-100"
+        />
+      </div>
+    </div>
+    } @if (automatitationIA) {
+    <div class="row">
+      <div class="col-12 col-lg-6 my-auto px-4 container-content-product">
+        <h2 class="my-5"><b> Automatización de procesos con I.A.</b></h2>
+        <p>
+          Optimiza tus procesos operativos con flujos de inteligencia artificial
+          que te permiten automatizar tareas y mejorar la eficiencia de tu
+          empresa.
+        </p>
+        <div class="containerbtnNCF d-flex justify-content-start">
+          <button class="btn btnNFC rounded-pill mb-3" type="button">
+            <a
+              href="https://wa.me/+51936321753?text=Me%20gustaría%20saber%20más%20información%20sobre%20las%20tarjetas%20NFC."
+              target="_blank"
+            >
+              <b> ► Contactanos </b>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img
+          src="../../../assets/images/automatizacion.png"
+          alt=""
+          class="w-100 h-100"
+        />
+      </div>
+    </div>
+    } @if (consultingIA) {
+    <div class="row">
+      <div class="col-12 col-lg-6 my-auto px-4 container-content-product">
+        <h2 class="my-5"><b> Consultoría en herramientas de I.A.</b></h2>
+        <p>
+          Empodera a tu equipo y capacítalos en el uso de herramientas de
+          inteligencia artificial para mejorar la eficiencia y productividad de
+          tu empresa.
+        </p>
+        <div class="containerbtnNCF d-flex justify-content-start">
+          <button class="btn btnNFC rounded-pill mb-3" type="button">
+            <a
+              href="https://wa.me/+51936321753?text=Me%20gustaría%20saber%20más%20información%20sobre%20las%20tarjetas%20NFC."
+              target="_blank"
+            >
+              <b> ► Contactanos </b>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img
+          src="../../../assets/images/consultoria.png"
+          alt=""
+          class="w-100 h-100"
+        />
+      </div>
+    </div>
+    } @if (sofwareWeb) {
+    <div class="row">
+      <div class="col-12 col-lg-6 my-auto px-4 container-content-product">
+        <h2 class="my-5"><b> Proyectos de Software & Web</b></h2>
+        <p>
+          Desarrolla tu proyecto de software o web con nuestro equipo de
+          expertos. Diseñamos soluciones a la medida de tus necesidades y
+          objetivos.
+        </p>
+        <div class="containerbtnNCF d-flex justify-content-start">
+          <button class="btn btnNFC rounded-pill mb-3" type="button">
+            <a
+              href="https://wa.me/+51936321753?text=Me%20gustaría%20saber%20más%20información%20sobre%20las%20tarjetas%20NFC."
+              target="_blank"
+            >
+              <b> ► Contactanos </b>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <img
+          src="../../../assets/images/software.png"
+          alt=""
+          class="w-100 h-100"
+        />
+      </div>
+    </div>
+    }
+  </div>
+
+  <!----------------  seccion of IMPACT ------------------>
+  <div class="row conatiner-stadistic pt-5">
+    <h2 class="col-12 col-lg-8 text-start">
+      <b>Impacto real en nuestros clientes.</b>
+    </h2>
+    <p class="col-12 col-lg-8">
+      Revolucionamos la forma en que las empresas se conectan y crecen, a través
+      de nuestros productos y servicios.
+    </p>
+  </div>
+
+  <!----------------  seccion of stadistics ------------------>
+  <div class="conatiner-stadistic-number">
+    <div class="row numbers py-5">
+      <div class="col border-start border-5">
+        <h3 class=""><b> 20 +</b></h3>
+        <p class="">Empresas afiliadas</p>
+      </div>
+      <div class="col border-start border-5">
+        <h3><b>40 +</b></h3>
+        <p>Profesionales Capacitados</p>
+      </div>
+      <div class="col border-start border-5">
+        <h3><b>1500 +</b></h3>
+        <p>Conexiones generadas</p>
+      </div>
+    </div>
+
+    <!----------------  seccion of carousel of brands ------------------>
+
+    <!--  carousel 1  -->
+    <ngx-slick-carousel
+      class="carousel carousel-brands1"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      @for (slide of slides; track slide){
+      <div ngxSlickItem class="slide">
+        <img src="{{ slide.img }}" alt="slide image" />
+      </div>
+      }
+    </ngx-slick-carousel>
+
+    <!--  carousel 2  -->
+    <ngx-slick-carousel
+      class="carousel carousel-brands2"
+      #slickModal="slick-carousel"
+      [config]="slideConfig2"
+    >
+      @for (slide of slides2; track slide){
+      <div ngxSlickItem class="slide2">
+        <img src="{{ slide.img }}" alt="slide image" />
+      </div>
+      }
+    </ngx-slick-carousel>
+  </div>
+</div>

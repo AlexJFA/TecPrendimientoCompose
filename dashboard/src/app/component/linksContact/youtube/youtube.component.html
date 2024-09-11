@@ -1,0 +1,21 @@
+<a
+  [ngStyle]="{
+    'background-color': backgroundColor,
+    'font-family': fontFamily,
+    color: color,
+    'text-decoration': 'none'
+  }"
+  [ngClass]="[
+    'col-12',
+    'btn',
+    this.forma,
+    'my-2',
+    'py-3',
+    boxShadowHover == 'hover' ? 'boxShadowHover' : ''
+  ]"
+  [href]="url"
+  target="_blank"
+>
+  <i class="bi bi-youtube"></i>
+  Youtube
+</a>

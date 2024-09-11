@@ -1,0 +1,10 @@
+i {
+  /* color: var(--blue); */
+  font-size: x-large;
+}
+
+.boxShadowHover:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 4px 4px rgba(136, 135, 135);
+  transition: 0.3s ease;
+}

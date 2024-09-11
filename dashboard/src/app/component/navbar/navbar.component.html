@@ -1,0 +1,223 @@
+<header class="container-fluid container-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="title">
+        <img
+          class="logo"
+          src="assets/images/isotipo_blanco-min.png"
+          alt="logo"
+        />
+        <h1 class="navbar-brand" routerLink="/clients">Tec-Prendimiento</h1>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <!-- <span class="navbar-toggler-icon"></span> -->
+
+        <span class=""><i class="bi bi-list"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- no quitar esta "ul" ya que nos permite colocar los link del lado derecho. -->
+        </ul>
+        <div class="buttons-nav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn btn-outline-dark m-2"
+                routerLink="/clients"
+                routerLinkActive="active"
+              >
+                Clientes
+              </button>
+            </li>
+
+            <!-- <li class="nav-item">
+              <button
+                type="button"
+                class="btn btn-outline-dark m-2"
+                routerLink="/card"
+                routerLinkActive="active"
+              >
+                Tarjetas
+              </button>
+            </li> -->
+
+            <!-- buttons of access  -->
+            @if (isLogged === false) {
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn btn-outline-dark m-2"
+                data-bs-toggle="modal"
+                data-bs-target="#modalLogin"
+              >
+                Login
+              </button>
+            </li>
+
+            } @else {
+
+            <!-- buttons of register -->
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn btn-outline-dark m-2"
+                data-bs-toggle="modal"
+                data-bs-target="#modalRegister"
+              >
+                Registrar
+              </button>
+            </li>
+
+            <!-- buttons of logout -->
+            <li class="nav-item">
+              <button
+                type="button"
+                class="btn btn-outline-dark m-2"
+                (click)="logout()"
+              >
+                Logout
+              </button>
+            </li>
+
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- modal login -->
+<div
+  class="modal fade"
+  id="modalLogin"
+  aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+          Ingresa tus credenciales
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="container formContainer m-0 p-0 w-100"
+          [formGroup]="userAdmin"
+        >
+          <div class="form-group my-2">
+            <label for="userId"><b>Email</b></label>
+            <input
+              formControlName="email"
+              type="text"
+              class="form-control my-1"
+              id="email"
+              placeholder="email@example.com"
+            />
+          </div>
+          <div class="form-group my-2">
+            <label for="password"><b>Contraseña</b></label>
+            <input
+              formControlName="password"
+              type="text"
+              class="form-control my-1"
+              id="password"
+              placeholder="Contraseña"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="submit"
+          class="btn"
+          [disabled]="!userAdmin.valid"
+          (click)="login()"
+          data-bs-dismiss="modal"
+        >
+          Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal register -->
+<div
+  class="modal fade"
+  id="modalRegister"
+  aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
+          Ingresar datos para registro
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          class="container formContainer m-0 p-0 w-100"
+          [formGroup]="userAdmin"
+        >
+          <div class="form-group my-2">
+            <label for="userId"><b>Email</b></label>
+            <input
+              formControlName="email"
+              type="text"
+              class="form-control my-1"
+              id="email"
+              placeholder="email@example.com"
+            />
+          </div>
+          <div class="form-group my-2">
+            <label for="password"><b>Contraseña</b></label>
+            <input
+              formControlName="password"
+              type="text"
+              class="form-control my-1"
+              id="password"
+              placeholder="Contraseña"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="submit"
+          class="btn"
+          [disabled]="!userAdmin.valid"
+          (click)="register()"
+          data-bs-dismiss="modal"
+        >
+          Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,252 @@
+@import url("../../../styles.css");
+
+.container-services {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+}
+
+/* --------------  seccion of  title  ---------- */
+.title {
+  font-size: 2.5rem;
+}
+.container-services p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+/* --------------  seccion of  cards  ---------- */
+.card1 {
+  background-image: url("../../../assets/images/card1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20rem;
+  height: 25rem;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+.card2 {
+  background-image: url("../../../assets/images/card2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20rem;
+  height: 25rem;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+.card3 {
+  background-image: url("../../../assets/images/card3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20rem;
+  height: 25rem;
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+.card-title {
+  margin-bottom: 14rem;
+}
+.card-text {
+  margin: 0;
+}
+.card-img-overlay .btn {
+  color: var(--white);
+  font-size: x-large;
+  margin: 0;
+}
+.card:hover {
+  box-shadow: 0 0 10px 0 rgba(207, 3, 139, 0.9);
+}
+
+.btnServices {
+  padding: 0.5rem 3rem;
+  background-color: var(--blueLight);
+  color: black;
+  font-size: x-large;
+}
+.btnServices:hover {
+  padding: 0.5rem 3.1rem;
+  box-shadow: 0 0 10px 0 rgba(207, 3, 139, 0.9);
+}
+
+.btnServices a {
+  color: var(--gray2);
+  text-decoration: none;
+}
+
+
+/* --------------  seccion of  products  ---------- */
+.products {
+  background-color: var(--gray2);
+}
+
+.products .border:hover {
+  box-shadow: 0 0 10px 0 rgba(207, 3, 139, 0.9);
+  cursor: pointer;
+}
+
+.container-content-product .btn {
+  color: var(--white);
+  font-size: x-large;
+}
+
+.container-content-product a {
+  color: var(--white);
+  text-decoration: none;
+
+}
+
+/* --------------  seccion of  products  ---------- */
+.conatiner-stadistic {
+  background-color: var(--white);
+  color: black;
+  padding: 2rem 5rem;
+}
+
+/* --------------  seccion of  stadistics  ---------- */
+.conatiner-stadistic h2 {
+  font-size: 4rem;
+  padding: 2rem 5rem;
+}
+.conatiner-stadistic p {
+  font-size: 1.5rem;
+}
+.conatiner-stadistic-number .numbers {
+  background-color: var(--white);
+  color: black;
+}
+
+.carousel {
+  background-color: var(--white);
+}
+
+.slide {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.slide img {
+  /* width: 100%;
+  height: 8rem; */
+}
+
+.slide2 img {
+  /* width: 100%;
+  height: 7rem;
+  padding: 0.5rem 1rem; */
+}
+
+/*  --------------------------------  Small devices (landscape phones, 350px and up) -------------------------------------- */
+@media (min-width: 350px) {
+  /* --------------  seccion of  title  ---------- */
+  .container-title {
+    padding: 1rem;
+    text-align: center;
+  }
+  .paragraph {
+    padding: 0 1rem;
+  }
+
+  /* --------------  seccion of  products  ---------- */
+  .products {
+    padding: 0 1rem;
+  }
+
+  .container-content-product h2 {
+    font-size: 2.5rem;
+  }
+
+
+  /* --------------  seccion of  stadistics  ---------- */
+  .conatiner-stadistic {
+    padding: 1rem;
+  }
+  .conatiner-stadistic h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 0rem 1rem;
+  }
+  .conatiner-stadistic-number h3 {
+    font-size: 2rem;
+    padding-left: 0;
+    text-align: center;
+  }
+  .conatiner-stadistic-number p {
+    font-size: 1.5rem;
+    padding-left: 0rem;
+    text-align: center;
+  }
+
+  /* --------------  seccion of  bransds  ---------- */
+
+  .slide img {
+    height: 7rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .slide2 img {
+    width: 100%;
+    height: 6rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* --------------------------  Medium devices (tablets, 768px and up) -------------------------------- */
+@media (min-width: 768px) {
+  .slide img {
+    width: 100%;
+    height: 7rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* ---------------------------- Large devices (desktops, 992px and up) ----------------------------------- */
+@media (min-width: 992px) {
+  /* --------------  seccion of  title  ---------- */
+  .container-title {
+    padding: 2rem 3rem;
+  }
+  .paragraph {
+    padding: 0 3rem;
+  }
+
+  /* --------------  seccion of  products  ---------- */
+  .container-content-product h2 {
+    font-size: 3.8rem;
+  }
+
+  /* --------------  seccion of  stadistics  ---------- */
+  .conatiner-stadistic h2 {
+    font-size: 4rem;
+    padding: 0rem 5rem;
+  }
+  .conatiner-stadistic p {
+    padding: 0rem 5rem;
+  }
+  .conatiner-stadistic-number .numbers {
+    padding: 1rem 5rem 1rem 9rem;
+    font-size: 4rem;
+  }
+  .conatiner-stadistic-number h3 {
+    font-size: 3rem;
+    padding-left: 2rem;
+  }
+  .conatiner-stadistic-number p {
+    font-size: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .carousel {
+    padding: 1rem 11rem 1rem 8rem;
+    margin: 0;
+  }
+
+  .carousel-brands2 {
+    padding: 1rem 12rem 5rem 9rem;
+    margin: 0;
+  }
+}

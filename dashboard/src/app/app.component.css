@@ -1,0 +1,55 @@
+header {
+  padding: 0;
+  color: var(--white);
+}
+
+.navbar {
+  background-color: var(--blue);
+  padding: 0;
+}
+
+.navbar-brand {
+  color: var(--white);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+h1:hover {
+  cursor: pointer;
+}
+
+.nav-item a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--white);
+}
+.nav-item a:hover {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.logo {
+  padding: 0 0.6rem 0 0;
+  width: 4rem;
+  height: auto;
+}
+.navbar-brand {
+  padding: 1rem 0 0.6rem 0;
+  font-size: 1.6rem;
+}
+
+button {
+  color: var(--white);
+  border-color: var(--white);
+  background-color: var(--blue);
+}
+
+.navbar-toggler-icon .bi-list {
+  color: var(--white);
+}

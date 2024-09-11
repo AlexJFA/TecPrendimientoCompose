@@ -1,0 +1,260 @@
+<body class="container-fluid container-body p-0">
+  <!-- BANNER DE PRESENTATION -->
+  <section class="row bannerPresentation">
+    <div class="col-12 col-md-6 col-text">
+      <!-- <h2 class="sub-title ps-5 pt-5"> -->
+      <h2 class="sub-title  col-12">Conecta al instante <br />con un solo toque.</h2>
+      <!-- <p class="paragrph-title ps-5 pt-2 pe-4"> -->
+      <p class="paragrph-title col-12">
+        Nuestras tarjetas NFC te permiten compartir tu información profesional
+        de manera rápida y eficaz. ¡Genera networking en segundos! Solo acerca
+        tu tarjeta a un dispositivo celular y comparte todas tus redes al
+        instante y de manera innovadora.
+      </p>
+      <div class="buttons-title ps-5 me-5">
+        <button type="button" class="btn btn1 fs-5 mt-2 mb-1 col-12 col-lg-6">
+          <a
+            href="https://wa.me/+51936321753?text=Me%20gustaría%20saber%20más%20información%20sobre%20las%20tarjetas%20NFC."
+            target="_blank"
+            ><b>Solicita la tuya</b></a
+          >
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-dark btn2 fs-5 col-12 col-lg-6"
+          (click)="redirectServices()"
+        >
+          <i class="bi bi-caret-right-fill"></i>
+          <b>Conoce Más</b>
+        </button>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-image">
+      <img
+        class=""
+        src="../../../assets/images/landing_main.gif"
+        alt="banner"
+      />
+    </div>
+  </section>
+
+  <!-- BANNER OF  WHY USE OUR PRODUCT -->
+  <section
+    class="container-fluid banner-ourProduct text-center  mx-0 px-3 py-5"
+  >
+    <div class="content-OP">
+      <h2 class="content-OP-title mt-5">
+        ¿Por qué Usar Tarjetas de Negocio NFC?
+      </h2>
+    </div>
+    <div class="row content-ourProduct">
+      <div class="col-12 col-sm-6 col-lg-3 content-OP my-3">
+        <h3>Alto Impacto</h3>
+
+        <p>
+          “Presenta tu perfil de manera innovadora, tecnológica y memorable.”
+        </p>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 content-OP my-3">
+        <h3>Fácil de Usar</h3>
+
+        <p>
+          “Solo acerca tu tarjeta a un celular y comparte todos tus enlaces y
+          redes.”
+        </p>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 content-OP my-3">
+        <h3>Personalizable</h3>
+
+        <p>
+          "Diseña tu tarjeta con una variedad de estilos y opciones
+          personalizadas."
+        </p>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3 content-OP my-3">
+        <h3>Sostenible</h3>
+
+        <p>
+          “Actualiza tu información en tiempo real y olvídate de las tarjetas de
+          papel.”
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER OF BENEFITS OF OUR PRODUCTS-->
+  <section class="row bannerBenefits text-start mt-5">
+    <div class="col-12 col-lg-6 contentBenefits-text">
+      <h2 class="content-benefits-title text-center">Más que una tarjeta</h2>
+      <div class="row paragraph-benefits">
+        <div class="col-12">
+          <h4 class="content-benefits-subTitle mb-0"><b>Portfolio Web</b></h4>
+          <p class="paragraph-bannerBenefict">
+            Funciona con todos los dispositivos móviles habilitados para NFC.
+          </p>
+        </div>
+
+        <div class="col-12">
+          <h4 class="content-benefits-subTitle mb-0">
+            <b>Seguridad de Datos</b>
+          </h4>
+          <p class="paragraph-bannerBenefict">
+            Tus datos están protegidos bajo nuestra estricta politica de
+            protección de datos.
+          </p>
+        </div>
+
+        <div class="col-12">
+          <h4 class="content-benefits-subTitle mb-0">
+            <b> Actualizaciones en Tiempo Real </b>
+          </h4>
+          <p class="paragraph-bannerBenefict">
+            Cambia tu información en cualquier momento que lo necesites.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 contentBenefits-img">
+      <img src="../../../assets/images/5-min.png" alt="BENEFITS" />
+    </div>
+  </section>
+
+  <!-- CUSTOMERS BRANDS CAROUSEL  -->
+  <section class="clientBrands my-5 ">
+    <div class="text-center">
+      <h4>Marcas que Confian en nuestro trabajo:</h4>
+    </div>
+
+    <!-- <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../../../assets/images/LANDING-min.png"
+            class="d-block w-100 img-brands"
+            alt="BRANDS"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../../../assets/images/LANDING-min.png"
+            class="d-block w-100 img-brands"
+            alt="BRANDS"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../../../assets/images/LANDING-min.png"
+            class="d-block w-100 img-brands"
+            alt="BRANDS"
+          />
+        </div>
+      </div>
+    </div> -->
+
+    <!--  carousel 1  -->
+    <ngx-slick-carousel
+      class="carousel carousel-brands1"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      @for (slide of slides; track slide){
+      <div ngxSlickItem class="slide">
+        <img src="{{ slide.img }}" alt="slide image" />
+      </div>
+      }
+    </ngx-slick-carousel>
+  </section>
+
+  <!-- BANNER OF WHAT INCLUDES -->
+  <section class="whatIncludes ">
+    <div class="row content-whatIncludes">
+      <div class="col-12 col-md-6 whatIncludes-img-girls mb-3">
+        <img src="../../../assets/images/3-min.png" alt="whatIncludes" />
+      </div>
+
+      <div class="col-12 col-md-6 whatIncludes-text my-auto">
+        <h2 class="whatIncludes-title"><b>Te incluimos</b></h2>
+        <div class="row">
+          <div class="col-12 whatIncludes-items whatIncludes-services">
+            <img
+              class="col whatIncludes-img"
+              src="../../../assets/images/diseno-min.png"
+              alt="diseño-min"
+            />
+            <p class="col">
+              <b>Servicio de diseño personalizado <br /></b>
+              Recibirás apoyo de nuestro equipo de diseño.
+            </p>
+          </div>
+          <div class="col-12 whatIncludes-items whatIncludes-services">
+            <img
+              class="whatIncludes-img"
+              src="../../../assets/images/tarjetaInteligente-min.png"
+              alt="tarjetaInteligente-min"
+            />
+            <p class="col">
+              <b>Tarjeta inteligente con Tecnología NFC <br /></b>
+              deal para networking de alto impacto.
+            </p>
+          </div>
+          <div class="col-12 whatIncludes-items whatIncludes-services">
+            <img
+              class="whatIncludes-img"
+              src="../../../assets/images/web-min.png"
+              alt="web-min"
+            />
+            <p class="col">
+              <b>Portafolio Web - Pagína de Presentación <br /></b>
+              Adicional un portafolio digital personalizable.
+            </p>
+          </div>
+          <div class="col-12 whatIncludes-items whatIncludes-services">
+            <img
+              class="whatIncludes-img"
+              src="../../../assets/images/soporte-min.png"
+              alt="soporte-min"
+            />
+            <p class="col">
+              <b>Soporte y Actualizaciones <br /></b>
+              Actualiza tu información siempre que necesites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER OF FREQUENT QUESTIONS  -->
+  <section class="frequentQuestions">
+    <div class="row">
+      <div class="col-12 col-md-6 frequentQuestions-content">
+        <h2 class=""><b>Preguntas Frecuentes</b></h2>
+        <div class="frequentQuestions-paragrahp rounded-pill p-3 w-100 ">
+          <p class="">
+            ¿Qué tipo de información puedo compartir con la tarjeta?
+          </p>
+        </div>
+        <div class="frequentQuestions-paragrahp rounded-pill p-3 w-100 ">
+          <p class="">¿Está segura mi información con las NFContact?</p>
+        </div>
+        <div class="frequentQuestions-paragrahp rounded-pill p-3 w-100 ">
+          <p class="">¿Qué otros productos o servicios ofrecen?</p>
+        </div>
+        <button
+          type="button"
+          class="btn btn-frequentQuestions fs-5 col-12 col-lg-4 text-start"
+          (click)="redirectFQA()"
+        >
+        <b>
+            <i class="bi bi-caret-right-fill"></i>
+
+            Conoce Más</b>
+        </button>
+      </div>
+    </div>
+  </section>
+</body>
