@@ -1,0 +1,22 @@
+<a
+  [ngStyle]="{
+    'background-color': backgroundColor,
+    'font-family': fontFamily,
+    color: color,
+    'text-decoration': 'none'
+  }"
+  [ngClass]="[
+    'col-12',
+    'btn',
+    this.forma,
+    'my-2',
+    'py-3',
+    boxShadowHover == 'hover' ? 'boxShadowHover' : ''
+  ]"
+  
+  [href]="'https://' + this.website"
+  target="_blank"
+>
+  <i class="bi bi-globe"></i>
+  Sitio Web 
+</a>

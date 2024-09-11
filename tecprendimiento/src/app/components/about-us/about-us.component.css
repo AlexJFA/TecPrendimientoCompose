@@ -1,0 +1,195 @@
+@import url("../../../styles.css");
+
+/* Seecion 1 presntation */
+* {
+  font-family: "Anonymous Pro", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.content-text-presentation {
+  font-size: 1.5em;
+  text-align: justify;
+  padding: 0 5rem;
+}
+
+.content-text-presentation h2 {
+  font-size: 2.5em;
+  text-align: center;
+  margin: 3rem 0;
+  font-family: "Abel", sans-serif;
+}
+.paragrahp-whith-backgound {
+  background-color: var(--blue);
+  padding: 1rem;
+  color: var(--white);
+  margin: 2.5rem 0;
+}
+
+/* seccion 2 our values  */
+
+.content-values * {
+  font-family: "Abel", sans-serif;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.content-image-values {
+  padding-left: 1.5em;
+}
+
+.content-image-values img {
+  width: 100%;
+  height: 100%;
+}
+
+.content-text-value {
+  padding: 4rem 4rem;
+}
+
+.content-text-value h2 {
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+}
+
+.content-text-value h4 strong {
+  font-size: 1.3em;
+}
+
+/* seccion 3  clients and history */
+
+.content-history-and-clients {
+  background-color: var(--gray2);
+  color: var(--white);
+  padding: 0 6rem;
+}
+
+.content-our-history h2 {
+  font-size: 2.6rem;
+  font-family: "Abel", sans-serif;
+  text-align: end;
+  padding: 6rem 0 3rem 0;
+}
+
+.content-our-history p {
+  text-align: justify;
+  font-family: "Abel", sans-serif;
+  font-size: 1.5rem;
+}
+
+.clients {
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.clients-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.clients-items img {
+  border-radius: 50%;
+  max-width: 10rem;
+  margin-right: 2rem;
+}
+
+.clients-items p {
+  font-family: "Abel", sans-serif;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+
+/* -------------------------------------------- */
+
+/* vista movil */
+@media (max-width: 768px) {
+  /* Seecion 1 presntation */
+  .content-text-presentation {
+    font-size: 1.3em;
+    padding: 0 1.2rem;
+  }
+
+  /* seccion 2 our values  */
+  .content-values {
+    padding-bottom: 2rem;
+  }
+
+  .content-text-value {
+    padding: 0 1em;
+  }
+
+  .content-text-value h2 {
+    font-size: 2em;
+    margin: 0.5rem 0 1rem 0;
+    text-align: center;
+  }
+  .content-text-value h4 {
+    font-size: 1.1em;
+    text-align: center;
+  }
+  .content-text-value p {
+    text-align: center;
+  }
+
+  /* seccion 3  clients and history */
+
+  .content-history-and-clients {
+    padding: 0 1.5rem;
+  }
+
+  .content-our-history H2 {
+    text-align: center;
+  }
+
+  .content-our-history p {
+    /* padding: 0 1.5rem; */
+    font-size: 1.3rem;
+  }
+
+  .clients {
+    /* padding: 0 4.5rem 3rem 4.5rem; */
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .clients-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0 2rem;
+  }
+
+  .clients-items img {
+    max-width: 8rem;
+    margin: 0;
+  }
+  .clients-items P {
+    text-align: center;
+  }
+}
+
+/* vista tablet */
+@media (max-width: 768px) {
+/* Seecion 1 presntation */
+/* .content-text-presentation {
+    padding: 0 2rem;
+  } */
+
+/* seccion 3  clients and history */
+/* .content-history-and-clients {
+    padding: 0 2rem;
+  }
+  .clients-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .clients-items P {
+    text-align: center;
+  } */
+}

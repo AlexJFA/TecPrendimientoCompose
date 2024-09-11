@@ -1,0 +1,426 @@
+@import url("../../../styles.css");
+
+/* BANNER PRESENTATION */
+
+.bannerPresentation {
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  /* height: 100vh; */
+}
+
+.col-image {
+  /* padding: 2rem 0 0 0;
+  margin: 2rem 0 0 0; */
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.sub-title {
+  font-family: "Abel", sans-serif;
+  /* font-family: "Anonymous Pro", monospace; */
+  /* padding: 2.3rem 0 0 3rem; */
+  padding: 2rem 0 0 2rem;
+}
+.paragrph-title {
+  font-family: "Anonymous Pro", monospace;
+  text-align: justify;
+  padding: 1rem 2rem 0 2rem;
+}
+
+.btn1 {
+  background-color: var(--blue);
+  border-color: transparent;
+  color: var(--white);
+  border-radius: 20px;
+  font-family: "Prompt", sans-serif;
+}
+
+.btn1 a{
+  color: var(--white);
+  text-decoration: none;
+}
+
+.btn2 {
+  background-color: transparent;
+  color: var(--gray);
+  border-color: transparent;
+  border-radius: 20px;
+  font-family: "Prompt", sans-serif;
+}
+
+/* BANNER OF  WHY USE OUR PRODUCT */
+
+.banner-ourProduct {
+  background-image: url("../../../assets/images/men-min-gray.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-size: auto; */
+  /* background-size: contain; */
+  /* background-size: cover 100%; */
+}
+
+.banner-ourProduct {
+  font-family: "Prompt", sans-serif;
+  /* font-family: "Abel", sans-serif; */
+  color: var(--white);
+}
+
+.content-ourProduct {
+  padding: 0 5rem;
+}
+
+.content-OP-title {
+  font-size: 3rem;
+}
+
+.content-OP h3 {
+  font-size: 2rem;
+}
+
+.content-OP p {
+  /* padding: 0 2rem; */
+  font-size: 1.2rem;
+  font-family: "Prompt", sans-serif;
+}
+
+/* BANNER OF BENEFITS OF OUR PRODUCTS */
+.contentBenefits-text {
+  /* font-family: "Prompt", sans-serif; */
+}
+
+.content-benefits-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.content-benefits-subTitle {
+  font-size: 2.2rem;
+}
+
+.paragraph-benefits {
+  margin: 0 5.5rem;
+  text-align: justify;
+}
+
+.paragraph-benefits p {
+  font-size: 1.7rem;
+}
+
+/* CUSTOMERS BRANDS CAROUSEL   */
+
+.carousel {
+  background-color: var(--white);
+}
+
+.slide {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.slide img {
+  width: 100%;
+  height: 10rem;
+  padding: 0.5rem 1rem;
+
+}
+
+
+/* <!-- BANNER OF WHAT INCLUDES --> */
+
+.whatIncludes {
+  margin: 0 1.5rem;
+}
+
+.whatIncludes-img-girls {
+  margin: 0;
+  padding: 0;
+}
+.whatIncludes-items {
+  background-color: var(--blueLight);
+  border-radius: 30px;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+.whatIncludes-items p {
+  text-align: center;
+}
+.whatIncludes-img {
+  max-width: 4rem;
+  max-height: 4rem;
+}
+
+/* <!-- BANNER OF FREQUENT QUESTIONS  --> */
+
+.frequentQuestions {
+  background-image: url("../../../assets/images/mens.png");
+  background-size: cover;
+  color: var(--white);
+  padding: 3rem;
+  position: relative;
+}
+.frequentQuestions-paragrahp {
+  background-color: var(--gray);
+  margin: 1rem 2rem;
+  /* border-radius: 25px; */
+  /* width: 100%; */
+  /* height: 4rem; */
+  /* display: flex;
+  justify-content: start;
+  align-items: center; */
+}
+
+/* .frequentQuestions-paragrahp p{
+  padding-left: 2rem;
+} */
+
+.btn-frequentQuestions {
+  color: var(--white);
+  /* width: 50%; */
+}
+
+/* ----------------------------------------------------- */
+
+/* vista movil ------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  /* BANNER PRESENTATION */
+  .bannerPresentation {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .col-image {
+    padding: 0 1rem;
+  }
+  .sub-title {
+    margin: 1rem 0 0 0;
+    padding: 0 0 0 2.3rem;
+  }
+  .paragrph-title {
+    /* padding: 1rem 2rem 0 2.3rem; */
+    padding: 1rem 1rem 0 1.3rem;
+  }
+
+  /* BANNER OF  WHY USE OUR PRODUCT */
+  .content-OP-title {
+    font-size: 2.5rem;
+  }
+  .content-ourProduct {
+    padding: 0;
+    font-size: 0.7rem;
+  }
+
+  /* BANNER OF BENEFITS OF OUR PRODUCTS */
+  .contentBenefits-text h2 {
+    font-size: 3rem;
+  }
+  .contentBenefits-text h4 {
+    font-size: 1.6rem;
+  }
+  .contentBenefits-text p {
+    font-size: 1.5rem;
+  }
+  .paragraph-benefits {
+    margin: 0;
+    text-align: center;
+  }
+    /* --------------  seccion of  bransds carousel ---------- */
+
+    .slide img {
+      height: 7rem;
+      padding: 0.5rem 1rem;
+    }
+  
+    .slide2 img {
+      width: 100%;
+      height: 6rem;
+      padding: 0.5rem 1rem;
+    
+    }
+
+
+  /* <!-- BANNER OF WHAT INCLUDES --> */
+  .whatIncludes {
+    margin: 0 1.5rem 1rem 1.5rem;
+  }
+  .whatIncludes-title {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  .whatIncludes-img {
+    max-width: 5rem;
+    max-height: 5rem;
+  }
+
+  .whatIncludes-text {
+    margin-top: 6rem;
+  }
+
+  /* <!-- BANNER OF FREQUENT QUESTIONS  --> */
+
+  .frequentQuestions {
+    padding: 2rem 0;
+  }
+  .frequentQuestions-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .frequentQuestions h2 {
+    font-size: 2.5rem;
+  }
+  .frequentQuestions-paragrahp {
+    padding: 3.5rem;
+    font-size: 1.1rem;
+  }
+  .frequentQuestions-paragrahp p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .btn-frequentQuestions {
+    margin-top: 1.5rem;
+  }
+
+  .btn-frequentQuestions b {
+    font-size: 1.5rem;
+  }
+}
+
+/* vista mediana--------------------------------------------------------------------------------------*/
+@media (max-width: 861px) {
+  .sub-title {
+    font-size: 2.5rem;
+  }
+  .paragrph-title {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 0;
+  }
+
+  .btn1,
+  .btn2 {
+    font-size: x-small;
+  }
+
+  /* BANNER OF BENEFITS OF OUR PRODUCTS */
+  .paragraph-benefits {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+/* vista grand */
+@media (min-width: 861px) and (max-width: 1028px) {
+  /* BANNER PRESENTATION */
+  .sub-title {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+
+  /* BANNER OF BENEFITS OF OUR PRODUCTS */
+  .content-benefits-title {
+    font-size: 3.5rem;
+  }
+
+  .content-benefits-subTitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* vista extra grande --------------------------------------------------------------------------*/
+@media (min-width: 1028px) {
+  /* BANNER PRESENTATION */
+  .sub-title {
+    font-size: 3.7rem;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+
+  /* BANNER OF BENEFITS OF OUR PRODUCTS */
+  .content-benefits-title {
+    font-size: 4rem;
+  }
+
+  .content-benefits-subTitle {
+    font-size: 2rem;
+  }
+
+  .btn-frequentQuestions b {
+    padding-left: 1rem;
+  }
+
+}
+
+@media (min-width: 1172px) {
+  /* BANNER PRESENTATION */
+  .sub-title {
+    font-size: 4rem;
+  }
+  .paragrph-title {
+    font-size: 1.5rem;
+  }
+
+  /* BANNER OF BENEFITS OF OUR PRODUCTS */
+  .content-benefits-title {
+    font-size: 5.5rem;
+  }
+
+  .content-benefits-subTitle {
+    font-size: 2rem;
+  }
+  .paragraph-bannerBenefict {
+    font-size: 1.5rem;
+  }
+}
+
+/* vista ultra grande  --------------------------------------------------------*/
+@media (min-width: 1712px) {
+  /* BANNER PRESENTATION */
+  .sub-title {
+    font-size: 4rem;
+    margin-top: 4rem;
+  }
+  .paragrph-title {
+    font-size: 1.5rem;
+  }
+
+  /* BANNER OF BENEFITS OF OUR PRODUCTS */
+  .content-benefits-title {
+    font-size: 7rem;
+  }
+
+  .content-benefits-subTitle {
+    font-size: 2.8rem;
+  }
+
+  .paragraph-benefits {
+    margin: 0 5.5rem;
+    text-align: justify;
+  }
+
+  /* <!-- BANNER OF WHAT INCLUDES --> */
+
+  .whatIncludes-title {
+    font-size: 3rem;
+  }
+  .whatIncludes-img {
+    max-width: 6.5rem;
+    max-height: 6.5rem;
+  }
+  .whatIncludes-items p {
+    font-size: 2rem;
+  }
+
+  .whatIncludes-items {
+    font-size: 1.5rem;
+  }
+}

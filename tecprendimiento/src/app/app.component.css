@@ -1,0 +1,135 @@
+@import url("../styles.css");
+
+
+/* ----  HEADER - NAVBAR ----- */
+header {
+  padding: 0;
+  color: var(--white);
+}
+
+.navbar {
+  background-color: var(--gray);
+  padding: 0;
+}
+
+.navbar-brand {
+  color: var(--white);
+}
+
+.navbar-toggler{
+  color: var(--white);
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+  color: #3B3B3B;
+
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+h1:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--white);
+}
+
+li {
+  list-style: none;
+}
+
+.logo {
+  padding: 0 0.6rem 0 0;
+  width: 4rem;
+  height: auto;
+}
+.navbar-brand {
+  padding: 1rem 0 0.6rem 0;
+  font-size: 1.6rem;
+}
+
+button {
+  border-color: var(--white);
+}
+
+/* ----  FOOTER  ----- */
+
+.footer {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 2rem;
+}
+
+.logo-footer {
+  font-size: 3rem;
+  padding: 0 0.6rem 0 0;
+  margin-bottom: 0.3rem;
+  width: 5rem;
+  height: auto;
+}
+
+.footer-title-div {
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer-title {
+  margin: 0;
+}
+
+.redes,
+.contact-footer,
+.terminosServicio,
+.derechosReservados {
+  margin-left: 6rem;
+}
+
+.redes a {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+.form-footer {
+  padding: 0 8rem;
+}
+
+.btn-outline-secondary {
+  color: var(--white);
+}
+
+.btn-footer {
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  /* Add your mobile styles here */
+
+  .contet-text-footer {
+  }
+
+  .footer-title-div {
+    margin: 0;
+  }
+
+  .redes,
+  .contact-footer,
+  .terminosServicio,
+  .derechosReservados {
+    margin-left: 0rem;
+  }
+
+  /* .form-footer h3 {
+    text-align: left;
+  } */
+
+  .form-footer {
+    padding: 0;
+  }
+}

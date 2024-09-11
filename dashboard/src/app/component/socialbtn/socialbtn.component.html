@@ -1,0 +1,39 @@
+<!-- whatsapp -->
+@if (whatsapp) {
+<app-whatsapp
+  [clientCard]="clientCard"
+  [whatsapp]="this.whatsapp"
+></app-whatsapp>
+}
+
+<!-- linkedin -->
+@if (linkedin) {
+<app-linkedin
+  [clientCard]="clientCard"
+  [linkedin]="this.linkedin"
+></app-linkedin>
+}
+
+<!-- facebook -->
+@if (facebook) {
+<app-facebook
+  [clientCard]="clientCard"
+  [facebook]="this.facebook"
+></app-facebook>
+}
+
+<!-- instagram -->
+@if (instagram) {
+<app-instagram
+  [clientCard]="clientCard"
+  [instagram]="this.instagram"
+></app-instagram>
+}
+<!-- twitter x -->
+@if (x) {
+<app-twitter-x [clientCard]="clientCard" [x]="this.x"></app-twitter-x>
+}
+<!-- twitch x -->
+@if (tiktok) {
+<app-tiktok [clientCard]="clientCard" [tiktok]="this.tiktok"></app-tiktok>
+}

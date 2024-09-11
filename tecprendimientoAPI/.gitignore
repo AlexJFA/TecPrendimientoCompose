@@ -1,0 +1,32 @@
+# Ignora el directorio node_modules
+node_modules/
+
+# Ignora el archivo .env que contiene las variables de entorno
+.env
+
+# Ignora el directorio de la caché
+.cache/
+
+# Ignora los archivos de compilación
+build/
+
+# Ignora los archivos de distribución
+dist/
+
+# Ignora los archivos de configuración del editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignora los archivos de registro
+*.log
+
+# Ignora los archivos de paquetes
+*.pid
+*.seed
+*.pid.lock
+
+# Ignora los directorios de prueba
+test/
+tests/

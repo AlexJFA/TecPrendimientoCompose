@@ -1,0 +1,165 @@
+<!----------------  container firt banner  ------------>
+<div class="row container-fluid container-blog py-5">
+  <!--  title -->
+  <div class="col-12 py-3">
+    <h2 class="title"><b>Blog</b></h2>
+  </div>
+
+  <!---------------- element of search ------------------>
+  <!-- <div class="col-12 col-lg-3 container-search">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control search rounded-start-pill border-secondary py-3 mb-3"
+        placeholder="   Buscar"
+        aria-label="Buscar"
+        aria-describedby="button-addon2"
+      />
+      <button
+        class="btn btn-footer rounded-end-pill border-secondary py-3 mb-3"
+        type="button"
+        id="button-addon2"
+      >
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </div> -->
+
+  <!------------------ paragraph -------------->
+  <div class="col-12 conatiner-paragraph mb-4">
+    <p>
+      Explora nuestro blog para descubrir artículos informativos y sobre
+      nuestros proyectos, nuestro impacto y la colaboración que realizamos con
+      otras organizaciones alineadas a nuestra misión.
+    </p>
+  </div>
+</div>
+
+<!--------  container Hias  ------------------------->
+<div class="container-fluid mt-5 mb-0 hias d-flex justify-content-center">
+  <div class="row container">
+    <div class="col-12 col-lg-6 my-auto">
+      <h2><b>HIAS Perú y su apuesta por las tarjetas inteligentes.</b></h2>
+      <p class="">
+        HIAS Perú implementó tarjetas NFC para su personal directivo, mejorando
+        la seguridad de la información de sus ejecutivos y facilitando un
+        networking más efectivo, alcanzando una representación profesional
+        mejorada.
+      </p>
+      <p class="">20 de Mayo, 2024.</p>
+      <!--------  container ver mas  sub-Pagina------------------------->
+      @if (!verMas) {
+      <div class="arrow text-center">
+        <h3 class="m-0 p-0">Ver más...</h3>
+        <button
+          class="border-0 bg-transparent text-center m-0 p-0"
+          (click)="verMas = true"
+        >
+          <i class="bi bi-arrow-down-short p-0"></i>
+        </button>
+      </div>
+      }
+    </div>
+
+    <div class="col-12 col-lg-6 container-img">
+      <img src="../../../assets/images/hias2.png" alt="IA" class="img-fluid" />
+    </div>
+  </div>
+</div>
+
+@if (verMas) {
+<div class="container-fluid my-5 d-flex justify-content-center">
+  <div class="row container">
+    <!--------  container desarrollo de la IA  ------------------------->
+    <!-- <p class="text-end" >20 Mayo, 2024 </p> -->
+    <div class="col-12">
+      <h2 class="text-center my-3 fs-1">
+        <b>HIAS Perú y su apuesta por las tarjetas inteligentes.</b>
+      </h2>
+      <p class="">
+        La ONG HIAS en Perú, reconocida por su compromiso con la protección y
+        asistencia a personas desplazadas y refugiadas, enfrenta constantemente
+        desafíos relacionados con la seguridad de la información personal de sus
+        altos ejecutivos. Estos profesionales, dedicados a coordinar programas
+        vitales para comunidades vulnerables, históricamente han utilizado
+        tarjetas de negocio en papel. Sin embargo, esta práctica tradicional
+        conlleva riesgos significativos, ya que la pérdida o el robo de estas
+        tarjetas podría comprometer datos confidenciales y personales.
+        Conscientes de la necesidad de mejorar la seguridad de la información y
+        mantener la imagen profesional de sus representantes, HIAS decidió
+        buscar una solución innovadora. En colaboración con Tecprendimiento,
+        especializada en soluciones tecnológicas, la organización optó por
+        adoptar tarjetas NFC de negocios. Estas tarjetas no solo eliminan el
+        riesgo asociado con el uso de papel, sino que también ofrecen un método
+        seguro y eficiente para la gestión de contactos y datos personales.
+      </p>
+    </div>
+    <!--------  container imagen  ------------------------->
+    <div class="col-12 d-flex aling-items-center justify-content-center my-3">
+      <img
+        src="../../../assets/images/hiasteam.png"
+        alt="IA"
+        class="img-fluid"
+      />
+    </div>
+    <h2 class="text-center my-3">
+      <b
+        >HIAS Perú 15.01.24 evento “Buenas Prácticas en Inclusión Laboral de
+        Personas Refugiadas y Migrantes” - Lima Perú.</b
+      >
+    </h2>
+    <p>
+      El proyecto incluyó la implementación de un riguroso protocolo de manejo
+      de datos, diseñado para garantizar la integridad y confidencialidad de la
+      información de los coordinadores y otros miembros clave del equipo. Además
+      de su función de seguridad, las tarjetas NFC se destacan por su
+      practicidad y portabilidad, facilitando interacciones profesionales y
+      promoviendo una imagen moderna y tecnológicamente avanzada para la ONG.
+      Este enfoque no solo fortalece la seguridad de la información en HIAS,
+      sino que también refleja su compromiso con la innovación y el bienestar de
+      su equipo. Como resultado, los altos ejecutivos pueden concentrarse en
+      desarrollar sus actividades de networking con la tranquilidad de saber que
+      sus datos están protegidos en todo momento.
+    </p>
+
+    <!--------  container imagen  ------------------------->
+    <div
+      class="col-12 d-flex aling-items-center justify-content-center mt-3 mb-2"
+    >
+      <img
+        src="../../../assets/images/jessicaDirecctora.png"
+        alt="IA"
+        class="img-fluid"
+      />
+    </div>
+    <p class="text-end">20.12.23 - Headquarters de HIAS Perú</p>
+
+    <p>
+      <b class="fs-3">Jessica, directora de programas</b> <br />
+      <span class="paragraphJessica"
+        >"Como directora de programas en HIAS, siempre enfrenté el desafío de
+        manejar tarjetas de negocio en papel que comprometían mi información
+        personal si se perdían. Esta solución con tarjetas NFC no solo es
+        altamente práctica y portable, sino que además se ve elegante y asegura
+        la protección de mis datos en todo momento."
+      </span>
+    </p>
+
+    <p>
+      Tu organización está lista para el siguiente paso en seguridad y
+      practicidad? Contáctanos para descubrir cómo podemos ayudarte a
+      implementar esta solución hoy mismo.
+    </p>
+  </div>
+</div>
+
+<div class="arrow text-center mb-3">
+  <button
+    class="border-0 bg-transparent text-center m-0 p-0"
+    (click)="verMas = false"
+  >
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+  <h3>Ver menos...</h3>
+</div>
+}

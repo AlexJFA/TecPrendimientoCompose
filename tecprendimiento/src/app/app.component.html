@@ -1,0 +1,133 @@
+<header class="container-fluid container-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <div class="title">
+        <img
+          class="logo"
+          src="assets/images/isotipo_blanco-min.png"
+          alt="logo"
+        />
+        <h1 class="navbar-brand" routerLink="/home">Tec-Prendimiento</h1>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <span class=""><i class="bi bi-list"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- no quitar esta "ul" ya que nos permite colocar los link del lado derecho. -->
+        </ul>
+        <div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                routerLink="/home"
+                routerLinkActive="active"
+                aria-current="page"
+                >INICIO</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                routerLink="/services"
+                routerLinkActive="active"
+                aria-current="page"
+                >SERVICIOS</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                routerLink="/about-us"
+                routerLinkActive="active"
+                aria-current="page"
+                >QUIENES SOMOS
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                routerLinkActive="active"
+                routerLink="/fqa"
+                aria-current="page"
+                >FAQ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                routerLinkActive="active"
+                routerLink="/blog"
+                aria-current="page"
+                >BLOG</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ROUTER ---------------------->
+<router-outlet class="w-100" />
+
+<!-- FOOTER ---------------------->
+<footer class="row footer">
+  <div class="col-12 footer-title-div">
+    <img
+      class="logo-footer"
+      src="../assets/images/isotipo_blanco-min.png"
+      alt="logo"
+    />
+    <h3 class="footer-title" routerLink="/home">Tec-Prendimiento</h3>
+  </div>
+  <div class="col-12 col-md-6 contet-text-footer">
+    <div class="contact-footer">
+      <p>contacto A tecprendimiento.com</p>
+    </div>
+
+    <div class="col redes">
+      <a class="link-instagram" href="https://www.instagram.com/tecprendimiento/?hl=es" target="_blank" ><i class="bi bi-instagram"></i></a>
+      <a class="link-facebook" href="https://www.facebook.com/profile.php?id=100094155970794" target="_blank" ><i class="bi bi-facebook"></i></a>
+      <a class="link-linkeding" href="https://www.linkedin.com/company/tecprendimiento/" target="_blank" ><i class="bi bi-linkedin"></i></a>
+      <a class="link-linkeding" href="https://www.tiktok.com/@tecprendimiento?_t=8o3uPIWXvLJ&_r=1" target="_blank" ><i class="bi bi-tiktok"></i></a>
+    </div>
+
+    <div class="terminosServicio">
+      <p>
+        Terminos de servicio <br />
+        Politica de Privacidad <br />
+        Redes Sociales
+      </p>
+      <P>Tecprendimiento® 2023. Todos los derechos reservados.</P>
+    </div>
+  </div>
+
+  <div class="col-12 col-md-6 form-footer text-left">
+    <h3 class="mb-3">Suscríbete a nuestras noticias:</h3>
+
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="@example.com"
+        aria-label="@example.com"
+        aria-describedby="button-addon2"
+      />
+      <button class="btn btn-footer" type="button" id="button-addon2">
+        Suscríbete
+      </button>
+    </div>
+  </div>
+</footer>

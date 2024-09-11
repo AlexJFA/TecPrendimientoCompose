@@ -1,0 +1,71 @@
+@import url("../../../styles.css");
+
+
+.container-blog {
+  background-image: url("../../../assets/images/menOffice.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  margin: 0;
+  padding: 1rem 4rem;
+}
+
+/* ----- seccion element search ----- */
+.search,
+.btn {
+  background-color: var(--gray3);
+}
+
+.container-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.arrow {
+  /* color: var(--white); */
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.arrow button:hover {
+/* 
+  font-size: 5rem; */
+  transform: scale(1.5);
+  transition: calc(0.5s);
+}
+
+.paragraphJessica {
+  
+  font-family: "Prompt", sans-serif;
+}
+
+/*  --------------------------------  Small devices (landscape phones, 350px and up) -------------------------------------- */
+@media (min-width: 350px) {
+  .container-blog {
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+  }
+}
+
+/* ---------------------------- Large devices (desktops, 992px and up) ----------------------------------- */
+@media (min-width: 768px) {
+  .container-blog {
+    font-size: large;
+    padding: 1.2rem;
+    text-align: justify;
+  }
+}
+/* ---------------------------- Large devices (desktops, 992px and up) ----------------------------------- */
+@media (min-width: 992px) {
+  .container-blog {
+    font-size: larger;
+    padding: 1rem 4rem;
+  }
+
+  .container p{
+    font-size: larger;
+  }
+}

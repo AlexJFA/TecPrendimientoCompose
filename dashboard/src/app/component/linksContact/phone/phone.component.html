@@ -1,0 +1,27 @@
+<a
+
+[ngStyle]="{
+    'background-color': backgroundColor,
+    'font-family': fontFamily,
+    color: color,
+    'text-decoration': 'none'
+  }"
+
+  [ngClass]="[
+  'col-12',
+  'btn',
+  this.forma,
+  'my-2',
+  'py-3',
+  boxShadowHover == 'hover'? 'boxShadowHover' : ''
+]"
+
+[href]="'tel:' + phone"
+target="_blank"
+>
+<i class="bi bi-telephone-fill"></i>
+Telefono 
+</a>
+
+<!-- style="text-decoration: none" -->
+<!-- class="col-12 btn rounded-5 my-2 py-3" -->

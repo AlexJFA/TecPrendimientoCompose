@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `Client` ADD COLUMN `map` VARCHAR(191) NULL,
+    ADD COLUMN `myfile` VARCHAR(191) NULL;

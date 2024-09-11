@@ -1,0 +1,707 @@
+<app-navbar></app-navbar>
+
+<!--
+This HTML code represents a table component for displaying client information.
+The table has the following columns:
+- Id
+- First Name
+- Last Name
+- Country
+- Email
+- Phone
+- Instagram
+- Linkeding
+- Web Siti
+- Photo
+
+The table is populated with data using an Angular for loop directive (@for) to iterate over the "clients" array.
+
+Example usage:
+<app-clients></app-clients>
+-->
+
+<!--------------------------- section table for show clients --------------------------->
+
+<div class="row d-flex justify-content-evenly my-3">
+  <h2 class="col-12 col-sm-auto p-0 title">Clientes</h2>
+</div>
+
+<div class="mx-3 border border-primary-secondary">
+  <!-- <div class="container-fluit container-table"> -->
+  <div class="table-responsive">
+    <table class="table table-light table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">
+            <button
+              type="button"
+              class="col btn btn-secondary text-center w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#addClientModal"
+            >
+              Agregar
+            </button>
+          </th>
+          <th scope="col">UserId</th>
+          <th scope="col">idCard</th>
+          <th scope="col">userName</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <!-- <th scope="col">Pais</th> -->
+          <th scope="col">Email</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Instagram</th>
+          <th scope="col">Linkedin</th>
+          <th scope="col">Sitio Web</th>
+          <th scope="col">Foto</th>
+          <th scope="col">Description</th>
+          <th scope="col">Spotify</th>
+          <th scope="col">Facebook</th>
+          <th scope="col">Youtube</th>
+          <th scope="col">X</th>
+          <th scope="col">Tiktok</th>
+          <th scope="col">Twitch</th>
+          <th scope="col">Map</th>
+          <th scope="col">Archivo</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (client of clients; track $index) {
+        <tr>
+          <!-- botones de eliminar y editar -->
+          <td class="td-buttons d-flex justify-content-evenly">
+            <button
+              class="btn btn-primary"
+              data-bs-target="#updateClientModal"
+              data-bs-toggle="modal"
+              (click)="getLocalOneClient($index)"
+            >
+              <i class="bi bi-pencil-square"></i>
+            </button>
+            <button
+              class="btn btn-primary"
+              class="btn btn-primary"
+              data-bs-target="#confimationDeleteClientModal"
+              data-bs-toggle="modal"
+              (click)="getIndex($index)"
+            >
+              <i class="bi bi-trash"></i>
+            </button>
+
+            <!-- capturar el index y exportar el index a la card -->
+            <button
+              class="btn btn-primary"
+              class="btn btn-primary"
+              (click)="navigateToCardPage($index)"
+            >
+              <i class="bi bi-link-45deg"></i>
+            </button>
+          </td>
+          <td>{{ client.userId }}</td>
+          <td>{{ client.idCard }}</td>
+          <td>{{ client.userName }}</td>
+          <td>{{ client.firtsName }}</td>
+          <td>{{ client.lastName }}</td>
+          <td>{{ client.email }}</td>
+          <td>{{ client.phone }}</td>
+          <td>{{ client.instagram }}</td>
+          <td>{{ client.linkedin }}</td>
+          <td>{{ client.website }}</td>
+          <td>{{ client.photo }}</td>
+          <td>{{ client.description }}</td>
+          <td>{{ client.spotify }}</td>
+          <td>{{ client.facebook }}</td>
+          <td>{{ client.youtube }}</td>
+          <td>{{ client.x }}</td>
+          <td>{{ client.tiktok }}</td>
+          <td>{{ client.twitch }}</td>
+          <td>{{ client.map }}</td>
+          <td>{{ client.myfile }}</td>
+          
+
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!---------------------- Modal add client ------------------>
+<div
+  class="modal fade"
+  id="addClientModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+      <div class="modal-body p-0">
+        <form
+          class="container row formContainer m-0 p-0 w-100"
+          [formGroup]="createForm"
+          type="form-data"
+        >
+          <div class="form-group col-12 col-sm-6">
+            <label for="idCard"><b>idCard</b> </label>
+            <input
+              formControlName="idCard"
+              type="text"
+              class="form-control"
+              id="idCard"
+              placeholder="idCard"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="firtsName"><b>Nombre</b></label>
+            <input
+              formControlName="firtsName"
+              type="text"
+              class="form-control"
+              id="firtsName"
+              placeholder="Nombre"
+              required
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="lastName"><b>Apellido</b> </label>
+            <input
+              formControlName="lastName"
+              type="text"
+              class="form-control"
+              id="lastName"
+              placeholder="Apellido"
+              required
+            />
+          </div>
+          <!-- <div class="form-group col-12 col-sm-6">
+            <label for="country"><b> Pais</b></label>
+            <input
+              formControlName="country"
+              type="text"
+              class="form-control"
+              id="country"
+              placeholder="Pais"
+            />
+          </div> -->
+          <div class="form-group col-12 col-sm-6">
+            <label for="email"><b> Email</b></label>
+            <input
+              formControlName="email"
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="EmailExample@gmail.com"
+              required
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="phone"><b> Telefono</b></label>
+            <input
+              formControlName="phone"
+              type="text"
+              class="form-control"
+              id="phone"
+              placeholder="Ejemplo 931 760 000"
+              required
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="instagram"><b> Instagram</b></label>
+            <input
+              formControlName="instagram"
+              type="text"
+              class="form-control"
+              id="instagram"
+              placeholder="https://www.instagram.com/username/"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="linkedin"><b>Linkedin</b> </label>
+            <input
+              formControlName="linkedin"
+              type="text"
+              class="form-control"
+              id="linkedin"
+              placeholder="https://www.linkedin.com/in/username/"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="website"><b>Sitio Web</b> </label>
+            <input
+              formControlName="website"
+              type="text"
+              class="form-control"
+              id="website"
+              placeholder="https://www.tecprendimiento.com/"
+            />
+          </div>
+          <div class="form-group col-12">
+            <label for="photo"><b>Foto</b> </label>
+            <input
+              formControlName="photo"
+              type="file"
+              class="form-control form-control-file"
+              id="photo"
+              (change)="onFileSelect($event)"
+              required
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="spotify"><b>Spotify</b> </label>
+            <input
+              formControlName="spotify"
+              type="text"
+              class="form-control"
+              id="spotify"
+              placeholder="https://www.spotify.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="description"><b>Description</b> </label>
+            <input
+              formControlName="description"
+              type="text"
+              class="form-control"
+              id="description"
+              placeholder="Profesional con mas de 5 años de experiencia."
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="facebook"><b>facebook</b> </label>
+            <input
+              formControlName="facebook"
+              type="text"
+              class="form-control"
+              id="facebook"
+              placeholder="https://www.facebook.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="youtube"><b>youtube</b> </label>
+            <input
+              formControlName="youtube"
+              type="text"
+              class="form-control"
+              id="youtube"
+              placeholder="https://www.youtube.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="x"><b>x</b> </label>
+            <input
+              formControlName="x"
+              type="text"
+              class="form-control"
+              id="x"
+              placeholder="https://www.x.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="tiktok"><b>tiktok</b> </label>
+            <input
+              formControlName="tiktok"
+              type="text"
+              class="form-control"
+              id="tiktok"
+              placeholder="https://www.tiktok.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="twitch"><b>twitch</b> </label>
+            <input
+              formControlName="twitch"
+              type="text"
+              class="form-control"
+              id="twitch"
+              placeholder="https://www.twitch.com/"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="map"><b>map</b> </label>
+            <input
+              formControlName="map"
+              type="text"
+              class="form-control"
+              id="map"
+              placeholder="https://www.map.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="myfile"><b>Mi Archivo</b> </label>
+            <input
+              formControlName="myfile"
+              type="text"
+              class="form-control"
+              id="myfile"
+              placeholder="https://www.myfile.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="userName"><b>userName</b> </label>
+            <input
+              formControlName="userName"
+              type="text"
+              class="form-control"
+              id="userName"
+              placeholder="Alexander_J_Figueredo"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="myfile"><b>Mi Archivo</b> </label>
+            <input
+              formControlName="myfile"
+              type="text"
+              class="form-control"
+              id="myfile"
+              placeholder="https://www.myfile.com/"
+            />
+          </div>
+
+          <div class="modal-footer col-12">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              [disabled]="!createForm.valid"
+              (click)="create()"
+              data-bs-dismiss="modal"
+            >
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------------- Modal Update client ------------------>
+<div
+  class="modal fade"
+  id="updateClientModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+      <div class="modal-body p-0">
+        <form
+          class="container row formContainer m-0 p-0 w-100"
+          [formGroup]="updateForm"
+        >
+          <div class="form-group col-12 col-sm-6">
+
+            <label for="userId"><b>userId</b></label>
+            <div>{{updateForm.get('userId')?.value}}</div>
+
+            <!-- <label for="userId"><b>userId</b></label>
+            <input
+              formControlName="userId"
+              type="text"
+              class="form-control"
+              id="userId"
+              placeholder="userId"
+            /> -->
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="idCard"><b>idCard</b> </label>
+            <input
+              formControlName="idCard"
+              type="text"
+              class="form-control"
+              id="idCard"
+              placeholder="idCard"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="firtsName"><b>Nombre</b></label>
+            <input
+              formControlName="firtsName"
+              type="text"
+              class="form-control"
+              id="firtsName"
+              placeholder="Nombre"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="lastName"><b>Apellido</b> </label>
+            <input
+              formControlName="lastName"
+              type="text"
+              class="form-control"
+              id="lastName"
+              placeholder="Apellido"
+            />
+          </div>
+          <!-- <div class="form-group col-12 col-sm-6">
+            <label for="country"><b> Pais</b></label>
+            <input
+              formControlName="country"
+              type="text"
+              class="form-control"
+              id="country"
+              placeholder="Pais"
+            />
+          </div> -->
+          <div class="form-group col-12 col-sm-6">
+            <label for="email"><b> Email</b></label>
+            <input
+              formControlName="email"
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="EmailExample@gmail.com"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="phone"><b> Telefono</b></label>
+            <input
+              formControlName="phone"
+              type="text"
+              class="form-control"
+              id="phone"
+              placeholder="Ejemplo 931 760 000"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="instagram"><b> Instagram</b></label>
+            <input
+              formControlName="instagram"
+              type="text"
+              class="form-control"
+              id="instagram"
+              placeholder="https://www.instagram.com/username/"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="linkedin"><b>Linkedin</b> </label>
+            <input
+              formControlName="linkedin"
+              type="text"
+              class="form-control"
+              id="linkedin"
+              placeholder="https://www.linkedin.com/in/username/"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="website"><b>Sitio Web</b> </label>
+            <input
+              formControlName="website"
+              type="text"
+              class="form-control"
+              id="website"
+              placeholder="https://www.tecprendimiento.com/"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-6">
+            <label for="photo"><b>Url de foto actual</b> </label>
+            <input
+              formControlName="photo"
+              type="text"
+              class="form-control"
+              id="photo"
+              placeholder="https://urlphoto.com/photo.jpg"
+            />
+          </div>
+          <div class="form-group col-12">
+            <label for="photoNew"><b>Actualizar Foto</b> </label>
+            <input
+              formControlName="photoNew"
+              type="file"
+              class="form-control form-control-file"
+              id="photoNew"
+              placeholder="photo.jpg"
+              (change)="onFileSelect($event)"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="spotify"><b>Spotify</b> </label>
+            <input
+              formControlName="spotify"
+              type="text"
+              class="form-control"
+              id="spotify"
+              placeholder="https://www.spotify.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="description"><b>Description</b> </label>
+            <input
+              formControlName="description"
+              type="text"
+              class="form-control"
+              id="description"
+              placeholder="Profesional con mas de 5 años de experiencia."
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="facebook"><b>facebook</b> </label>
+            <input
+              formControlName="facebook"
+              type="text"
+              class="form-control"
+              id="facebook"
+              placeholder="https://www.facebook.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="youtube"><b>youtube</b> </label>
+            <input
+              formControlName="youtube"
+              type="text"
+              class="form-control"
+              id="youtube"
+              placeholder="https://www.youtube.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="x"><b>x</b> </label>
+            <input
+              formControlName="x"
+              type="text"
+              class="form-control"
+              id="x"
+              placeholder="https://www.x.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="tiktok"><b>tiktok</b> </label>
+            <input
+              formControlName="tiktok"
+              type="text"
+              class="form-control"
+              id="tiktok"
+              placeholder="https://www.tiktok.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="twitch"><b>twitch</b> </label>
+            <input
+              formControlName="twitch"
+              type="text"
+              class="form-control"
+              id="twitch"
+              placeholder="https://www.twitch.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="map"><b>map</b> </label>
+            <input
+              formControlName="map"
+              type="text"
+              class="form-control"
+              id="map"
+              placeholder="https://www.map.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="myfile"><b>Mi Archivo</b> </label>
+            <input
+              formControlName="myfile"
+              type="text"
+              class="form-control"
+              id="myfile"
+              placeholder="https://www.myfile.com/"
+            />
+          </div>
+
+          <div class="form-group col-12 col-sm-6">
+            <label for="userName"><b>userName</b> </label>
+            <input
+              formControlName="userName"
+              type="text"
+              class="form-control"
+              id="userName"
+              placeholder="Alexander_J_Figueredo"
+            />
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              [disabled]="!updateForm.valid"
+              (click)="update()"
+              data-bs-dismiss="modal"
+            >
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!---------------------- Modal confimation delete client ------------------>
+<div class="modal fade" tabindex="-1" id="confimationDeleteClientModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h5>¿Esta Seguro de querer eliminar este cliente?.</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          No
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="delet()"
+          data-bs-dismiss="modal"
+        >
+          Si
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
