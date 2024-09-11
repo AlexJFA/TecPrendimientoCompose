@@ -76,5 +76,5 @@ services:
 volumes:
   mysql-data:
     driver: local
-  api-data:
-    driver: local
+api-data:
+  driver: local
