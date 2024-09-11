@@ -287,9 +287,8 @@ export class ClientsComponent implements OnInit {
         this.file = null;  
       });
       return;
-    }
-
-    // en caso de que este sin archivo soolo enviamos el client
+    }else{
+      // en caso de que este sin archivo soolo enviamos el client
     this.clientService.updateClient(client, id).subscribe((data) => {
       backendResponse = data;
 
@@ -309,6 +308,7 @@ export class ClientsComponent implements OnInit {
       this.updateForm.reset();
       return;
     });
+    }
   }
 
   // get one client to delete
