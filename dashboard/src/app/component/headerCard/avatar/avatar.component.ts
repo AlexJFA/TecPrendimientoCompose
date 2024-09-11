@@ -28,7 +28,7 @@ export class AvatarComponent implements OnInit {
     //   (component: any) => component.type === 'avatar'
     // );
 
-    this.src = `http://api.tecprendimiento.com/uploads/${this.avatar[2].firtsName}_${this.avatar[3].lastName}.jpg`;
+    this.src = `https://api.tecprendimiento.com/uploads/${this.avatar[2].firtsName}_${this.avatar[3].lastName}.jpg`;
     // this.src = `http://api.tecprendimiento.com/uploads/${this.PropertyClient.firtsName}_${this.PropertyClient.lastName}.jpg`;
 
     this.forma = this.clientCard.avatarStyle;

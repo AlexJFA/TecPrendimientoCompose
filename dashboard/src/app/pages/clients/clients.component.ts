@@ -130,6 +130,7 @@ export class ClientsComponent implements OnInit {
       this.file = event.target.files[0];
       // this.createForm.get('photo')?.setValue(file);
     }
+    return;
   }
 
   create() {
@@ -174,6 +175,7 @@ export class ClientsComponent implements OnInit {
       // reset the form
       this.createForm.reset();
       this.file = null;
+      return;
     });
   }
 
@@ -232,6 +234,7 @@ export class ClientsComponent implements OnInit {
       myfile: client.myfile,
       userName: client.userName,
     });
+    return;
   }
 
   // update a client
@@ -282,6 +285,7 @@ export class ClientsComponent implements OnInit {
         // reset the form and the file
         this.updateForm.reset();
         this.file = null;
+        return;
       });
     }
 
@@ -303,6 +307,7 @@ export class ClientsComponent implements OnInit {
 
       // reset the form
       this.updateForm.reset();
+      return;
     });
   }
 
@@ -312,6 +317,7 @@ export class ClientsComponent implements OnInit {
   // get the index of the client to delete
   getIndex(index: number) {
     this.clientToDelete = this.clients[index];
+    return;
   }
 
   /**
@@ -329,6 +335,7 @@ export class ClientsComponent implements OnInit {
 
     this.cardService.setOneUser(client);
     this.router.navigate(['/card', userName]);
+    return;
   }
 
   // delete a client
@@ -353,6 +360,7 @@ export class ClientsComponent implements OnInit {
 
           // reset the form
           this.deleteForm.reset();
+          return;
         });
     }
   }
