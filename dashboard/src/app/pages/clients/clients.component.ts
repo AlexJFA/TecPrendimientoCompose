@@ -263,9 +263,9 @@ export class ClientsComponent implements OnInit {
       formData.append('tiktok', this.updateForm.get('tiktok')?.value);
       formData.append('twitch', this.updateForm.get('twitch')?.value);
       formData.append('idCard', this.updateForm.get('idCard')?.value);
-      formData.append('map', this.createForm.get('map')?.value);
-      formData.append('myfile', this.createForm.get('myfile')?.value);
-      formData.append('userName', this.createForm.get('userName')?.value);
+      formData.append('map', this.updateForm.get('map')?.value);
+      formData.append('myfile', this.updateForm.get('myfile')?.value);
+      formData.append('userName', this.updateForm.get('userName')?.value);
 
       this.clientService.updateClient(formData, id).subscribe((data) => {
         backendResponse = data;
