@@ -332,9 +332,10 @@ export class ClientsComponent implements OnInit {
 
     const client = this.clients[index];
     const userName = client.userName;
-
+    const url = `https://web.tecprendimiento.com/card/${userName}`;
     this.cardService.setOneUser(client);
-    this.router.navigate(['/card', userName]);
+    // this.router.navigate(['/card', userName]);
+    window.open(url, '_blank')
     return;
   }
 
