@@ -37,7 +37,7 @@ FROM nginx:stable-alpine
 COPY --from=build /usr/src/app/dist/dashboard/browser /usr/share/nginx/html
 
 # Reemplazar el archivo de configuración por uno personalizado, si es necesario (opcional)
-COPY /nginx.conf /etc/nginx/nginx.conf
+COPY /usr/src/app/nginx.conf /etc/nginx/nginx.conf
 
 # Exponer el puerto 80
 # EXPOSE 80
